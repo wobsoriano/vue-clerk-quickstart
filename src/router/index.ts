@@ -14,11 +14,10 @@ const router = createRouter({
     },
     {
       path: '/dashboard',
-      component: import('../components/DashboardSkeleton.vue'),
+      component: import('../components/DashboardLayout.vue'),
       children: [
         {
           path: '',
-          name: 'dashboard',
           component: import('../views/DashboardView.vue')
         },
         {

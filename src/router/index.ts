@@ -1,11 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ContactView from '../views/ContactView.vue'
-import DashboardSkeleton from '../components/DashboardSkeleton.vue'
-import DashboardView from '../views/DashboardView.vue'
-import DashboardInvoicesView from '../views/DashboardInvoicesView.vue'
-import SignInView from '../views/SignInView.vue'
-import SignUpView from '../views/SignUpView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,30 +10,30 @@ const router = createRouter({
     },
     {
       path: '/contact',
-      component: ContactView
+      component: import('../views/ContactView.vue'),
     },
     {
       path: '/dashboard',
-      component: DashboardSkeleton,
+      component: import('../components/DashboardSkeleton.vue'),
       children: [
         {
           path: '',
           name: 'dashboard',
-          component: DashboardView
+          component: import('../views/DashboardView.vue')
         },
         {
           path: 'invoices',
-          component: DashboardInvoicesView
+          component: import('../views/DashboardInvoicesView.vue')
         }
       ]
     },
     {
       path: '/sign-in',
-      component: SignInView
+      component: import('../views/SignInView.vue')
     },
     {
       path: '/sign-up',
-      component: SignUpView
+      component: import('../views/SignUpView.vue')
     }
   ]
 })

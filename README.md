@@ -1,4 +1,4 @@
-# Vue Clek Quickstart
+# Vue Clerk Quickstart
 
 This template should help get you started developing with Vue, Clerk, and Vue Router.
 

@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "vue": "^3.4.21",
-    "vue-clerk": "^0.4.0",
+    "vue-clerk": "^0.4.3",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {

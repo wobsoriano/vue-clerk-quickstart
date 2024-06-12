@@ -5,8 +5,8 @@ import { SignedIn, SignedOut, UserButton } from 'vue-clerk'
 <template>
   <header class="header">
     <div>
-      <div>
-        <p>Clerk + Vue + Vue Router App</p>
+      <div style="flex-grow: 1;">
+        <p class="title">Clerk + Vue + Vue Router App</p>
       </div>
       <SignedIn>
         <UserButton after-sign-out-url="/sign-in" />

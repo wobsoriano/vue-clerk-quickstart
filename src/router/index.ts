@@ -10,29 +10,29 @@ const router = createRouter({
     },
     {
       path: '/contact',
-      component: import('../views/ContactView.vue'),
+      component: () => import('../views/ContactView.vue'),
     },
     {
       path: '/dashboard',
-      component: import('../components/DashboardLayout.vue'),
+      component: () => import('../components/DashboardLayout.vue'),
       children: [
         {
           path: '',
-          component: import('../views/DashboardView.vue')
+          component: () => import('../views/DashboardView.vue')
         },
         {
           path: 'invoices',
-          component: import('../views/DashboardInvoicesView.vue')
+          component: () => import('../views/DashboardInvoicesView.vue')
         }
       ]
     },
     {
       path: '/sign-in',
-      component: import('../views/SignInView.vue')
+      component: () => import('../views/SignInView.vue')
     },
     {
       path: '/sign-up',
-      component: import('../views/SignUpView.vue')
+      component: () => import('../views/SignUpView.vue')
     }
   ]
 })

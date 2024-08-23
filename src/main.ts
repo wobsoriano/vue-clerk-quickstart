@@ -8,14 +8,10 @@ const app = createApp(App)
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
-if (!PUBLISHABLE_KEY) {
-  throw new Error('Missing Publishable Key')
-}
-
 app.use(clerkPlugin, {
   routerPush: router.push,
   routerReplace: router.replace,
-  publishableKey: PUBLISHABLE_KEY
+  // publishableKey: PUBLISHABLE_KEY
 })
 app.use(router)
 

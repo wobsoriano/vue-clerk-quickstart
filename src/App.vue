@@ -9,7 +9,7 @@ import { SignedIn, SignedOut, UserButton } from 'vue-clerk'
         <p class="title">Clerk + Vue + Vue Router App</p>
       </div>
       <SignedIn>
-        <UserButton after-sign-out-url="/sign-in" />
+        <UserButton />
       </SignedIn>
       <SignedOut>
         <RouterLink to="/sign-in">Sign In</RouterLink>

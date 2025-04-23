@@ -1,9 +1,5 @@
 <template>
-  <h1>Invoices page</h1>
-  <p>This is a protected page.</p>
-
-  <ul>
-    <li><RouterLink to="/dashboard">Dashboard</RouterLink></li>
-    <li><RouterLink to="/">Return to index</RouterLink></li>
-  </ul>
+    <section class="grid gap-2 p-2">
+        <p>You are currently on the invoices route.</p>
+    </section>
 </template>

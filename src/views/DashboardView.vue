@@ -1,9 +1,11 @@
-<template>
-  <h1>Dashboard page</h1>
-  <p>This is a protected page.</p>
+<script setup lang="ts">
+import { useUser } from '@clerk/vue'
+const { user } = useUser()
+</script>
 
-  <ul>
-    <li><RouterLink to="/dashboard/invoices">Invoices</RouterLink></li>
-    <li><RouterLink to="/">Return to index</RouterLink></li>
-  </ul>
+<template>
+    <section class="grid gap-2 p-2">
+    <p>Hi {{ user?.firstName || user?.emailAddresses[0].emailAddress || 'there' }}!</p>
+    <p>You are currently on the dashboard route.</p>
+    </section>
 </template>

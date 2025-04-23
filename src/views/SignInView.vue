@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { SignIn } from 'vue-clerk'
+import { SignIn } from '@clerk/vue'
 </script>
 
 <template>
-  <SignIn path="/sign-in" />
+  <div class="flex justify-center items-center min-h-screen">
+    <SignIn />
+  </div>
 </template>

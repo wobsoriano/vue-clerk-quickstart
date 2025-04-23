@@ -13,8 +13,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@clerk/vue": "^1.6.4",
     "vue": "^3.5.0",
-    "vue-clerk": "^0.6.7",
     "vue-router": "^4.4.3"
   },
   "devDependencies": {
@@ -25,13 +25,25 @@
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.5.1",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.9.0",
     "eslint-plugin-vue": "^9.28.0",
     "npm-run-all2": "^6.2.2",
+    "postcss": "^8.5.1",
     "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.17",
     "typescript": "~5.5.4",
     "vite": "^5.4.2",
     "vite-plugin-vue-devtools": "^7.3.9",
     "vue-tsc": "^2.1.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@clerk/shared",
+      "esbuild"
+    ],
+    "patchedDependencies": {
+      "@clerk/vue@1.6.4": "patches/@clerk__vue@1.6.4.patch"
+    }
   }
 }

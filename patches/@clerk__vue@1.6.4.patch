@@ -1,0 +1,22 @@
+diff --git a/dist/index.js b/dist/index.js
+index 5468f2677883449e385839381a17f6c7566cf184..e6b0f4a24197c9cd6ebb4633031b706046ef9689 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -1608,6 +1608,17 @@ var clerkPlugin = {
+         await window.Clerk.load(options);
+         loaded.value = true;
+         clerk.value.addListener((payload) => {
++          // Batching update issue
++          if (
++            payload.client &&
++            payload.session === undefined &&
++            payload.user === undefined &&
++            payload.organization === undefined &&
++            resources.value.client
++          ) {
++            return
++          }
++
+           resources.value = payload;
+         });
+         triggerRef(clerk);

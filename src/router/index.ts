@@ -43,7 +43,7 @@ router.beforeEach(async (to, from, next) => {
   }
   console.log('to', to)
 
-  if (to.path === '/dashboard' && !isSignedIn.value) {
+  if (['/dashboard', '/invoices'].includes(to.path) && !isSignedIn.value) {
     return next({ path: '/sign-in' })
   }
 
